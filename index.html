@@ -54,7 +54,7 @@
         </select>
       </div>
       <div class="item">
-        <p>Describe el skill a desarrollar.</p>
+        <p>Describe la meta de aprendizaje a desarrollar.</p>
       </div>
       <div class="item">
         <p>lenguajes de programación [java y C++]</p>
@@ -92,6 +92,8 @@
         </div>
       </div>
       <div class="indicadores">
+        <p>Slabs:</p>
+        <p id="counter">0/10</p>
         <b>SET</b>
         <p></p>
         <b>Descubre</b>
@@ -100,6 +102,13 @@
         <a id="demuestra" href="#"></a>
         <b>Autovaloración</b>
         <a id="autovaloracion" href="#"></a>
+        <button type="button" name="button" onclick="saveSlab()">Capturar slab</button>
+        <select id="slabDropdownMenu" onchange="updateFields();">
+        </select>
+        <button type="button" name="button" onclick="translateObj2Arr(); download_csv_file();">Descargar CSV</button>
+        <button type="button" name="button" onclick="deleteSlab()">Borrar slab</button>
+        <button type="button" name="button" onclick="cleanFields()">Vaciar campos</button>
+        <button type="button" name="button" onclick="test()">test</button>
       </div>
     </div>
     <script type="text/javascript" src="js/form.js"></script>
